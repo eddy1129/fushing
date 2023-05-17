@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+.sm2 {
+  width: 20%;
+  height: 100vh;
+  margin-right: 10px;
+}
+
+.sm10 {
+  width: 90%;
+  height: 100vh;
+}
