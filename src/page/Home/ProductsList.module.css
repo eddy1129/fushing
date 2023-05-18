@@ -16,4 +16,5 @@
 .productTable{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Center content horizontally */
 }
