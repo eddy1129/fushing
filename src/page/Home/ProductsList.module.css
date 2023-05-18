@@ -5,16 +5,18 @@
 .sm2 {
   width: 20%;
   height: 100vh;
-  margin-right: 10px;
+  position: fixed;
+  display: block;
 }
 
 .sm10 {
-  width: 90%;
   height: 100vh;
+  margin-left: 20%; /* Add margin to accommodate the width of the sidebar */
 }
 
-.productTable{
+.productTable {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
+  align-items: center;
 }
