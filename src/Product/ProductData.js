@@ -2,7 +2,7 @@ const data = [
   {
     id: 0,
     product_type: "New-Year",
-    product_name: "Apple",
+    product_name: "燈龍",
     size: "20 x 60",
     price: 8888,
     image:
