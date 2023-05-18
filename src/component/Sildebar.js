@@ -18,7 +18,7 @@ function Sildebar() {
   }, [input]);
 
   const showNewYearProduct = () => {
-    const init_productsList = productsData.map((item) =>
+    const newYearProduct = productsData.map((item) =>
       item.product_type === "New-Year" ? (
         <ProductItem
           key={item.id}
@@ -32,11 +32,11 @@ function Sildebar() {
       ) : null
     );
 
-    setTableItems(init_productsList);
+    setTableItems(newYearProduct);
   };
 
   const showChristmasProduct = () => {
-    const init_productsList = productsData.map((item) =>
+    const christmasProduct = productsData.map((item) =>
     item.product_type === "Christmas" ? (
       <ProductItem
         key={item.id}
@@ -50,12 +50,12 @@ function Sildebar() {
     ) : null
   );
 
-    setTableItems(init_productsList);
+    setTableItems(christmasProduct);
   };
 
   const searchProduct = () => {
     console.log(input)
-    const init_productsList = productsData.map((item) =>
+    const productsList = productsData.map((item) =>
       item.product_name.includes(input) ? (
         <ProductItem
           key={item.id}
@@ -69,7 +69,7 @@ function Sildebar() {
       ) : null
     );
 
-    setTableItems(init_productsList);
+    setTableItems(productsList);
   };
 
   return (
