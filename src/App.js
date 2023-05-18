@@ -8,7 +8,7 @@ import Title from "./Title.js";
 function App() {
   return (
     <BrowserRouter>
-      <Title fuck="fuck" />
+      <Title topic="FuShing" />
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route path="/checkout" element={<Checkout />} />

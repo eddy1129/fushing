@@ -1,10 +1,9 @@
-export default function Title({ mainTitle, fuck }) {
+export default function Title({ topic }) {
   return (
-    <div>
-      <h1 style={{ borderBottom: "5px solid red", textAlign: "center" }}>
-        {mainTitle}
-        {fuck}
+      
+      <h1 style={{textAlign: "center"}}>
+        {topic}
       </h1>
-    </div>
+     
   );
 }
