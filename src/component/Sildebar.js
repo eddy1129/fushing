@@ -37,18 +37,18 @@ function Sildebar() {
 
   const showChristmasProduct = () => {
     const init_productsList = productsData.map((item) =>
-      item.product_name.includes(input) ? (
-        <ProductItem
-          key={item.id}
-          id={item.id}
-          product_type={item.product_type}
-          product_name={item.product_name}
-          size={item.size}
-          price={item.price}
-          image={item.image}
-        />
-      ) : null
-    );
+    item.product_type === "Christmas" ? (
+      <ProductItem
+        key={item.id}
+        id={item.id}
+        product_type={item.product_type}
+        product_name={item.product_name}
+        size={item.size}
+        price={item.price}
+        image={item.image}
+      />
+    ) : null
+  );
 
     setTableItems(init_productsList);
   };
