@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import Title from "./Title";
+import Title from "../../component/Title";
 
 export default function ProductDetail() {
   let params = useParams();

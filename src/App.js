@@ -1,18 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Checkout from "./Checkout.js";
-import ProductDetail from "./ProductDetail";
-import ProductList from "./ProductList";
+import ProductDetail from "./page/ProductDetail/ProductDetail";
+import ProductList from "./page/Home/ProductList";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Title from "./Title.js";
+import Title from "./component/Title.js";
 
 function App() {
   return (
     <BrowserRouter>
-      <Title topic="FuShing" />
+     <Title topic="FuShing" />
       <Routes>
         <Route path="/" element={<ProductList />} />
-        <Route path="/checkout" element={<Checkout />} />
-
         <Route path="/product" element={<ProductDetail />}>
           <Route path=":id" element={<ProductDetail />} />
         </Route>

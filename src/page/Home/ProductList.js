@@ -1,7 +1,7 @@
-import Sildebar from "./Sildebar";
-import productsData from "./Product/ProductData";
+import Sildebar from "../../component/Sildebar";
+import productsData from "../../Product/ProductData";
 import classes from "./ProductsList.module.css";
-import ProductItem from "./ProductItem";
+import ProductItem from "../../component/ProductItem";
 
 export default function ProductList() {
     const productsList = productsData.map((item) => (
@@ -22,7 +22,7 @@ export default function ProductList() {
       </div>
       <div className={classes.sm10}>
         <div>
-          <div>
+          <div className={classes.productTable}>
             { productsList }
           </div>
         </div>
