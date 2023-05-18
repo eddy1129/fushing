@@ -56,7 +56,7 @@ function Sildebar() {
   const searchProduct = () => {
     console.log(input)
     const productsList = productsData.map((item) =>
-      item.product_name.includes(input) ? (
+    item.product_name.toLowerCase().includes(input.toLowerCase()) ? (
         <ProductItem
           key={item.id}
           id={item.id}
