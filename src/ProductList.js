@@ -1,9 +1,20 @@
-import { Link } from "react-router-dom";
 import Sildebar from "./Sildebar";
 import productsData from "./Product/ProductData";
 import classes from "./ProductsList.module.css";
+import ProductItem from "./ProductItem";
 
 export default function ProductList() {
+    const productsList = productsData.map((item) => (
+    <ProductItem
+      key={item.id}
+      id={item.id}
+      product_type={item.product_type}
+      product_name={item.product_name}
+      size={item.size}
+      price={item.price}
+      image={item.image}
+    />
+  ));  
   return (
     <div className={classes.container}>
       <div className={classes.sm2}>
@@ -12,18 +23,7 @@ export default function ProductList() {
       <div className={classes.sm10}>
         <div>
           <div>
-            {productsData.map((product) => (
-              <div key={product.id}>
-                {product.name}
-                <br />
-                {product.price}
-                <br />
-                <Link to={"/product/" + product.id}>
-                  <img src={product.image} alt={product.name} />
-                </Link>
-                <br />
-              </div>
-            ))}
+            { productsList }
           </div>
         </div>
       </div>
