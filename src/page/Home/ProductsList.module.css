@@ -1,23 +1,17 @@
-
-
-
-.tableItems {
-  height: 100vh;
-  margin-left: 20%; /* Add margin to accommodate the width of the sidebar */
+.productTable {
+  margin-left: 200px;
 }
 
-.productTable {
+.tableItems {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-@media only screen and (max-width: 900px) {
-  
-  .tableItems {
-    height: 100vh;
-    margin-left: 0%; 
 
+@media only screen and (max-width: 900px) {
+  .productTable {
+    margin-left: 0%;
   }
 }

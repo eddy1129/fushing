@@ -70,41 +70,34 @@ function Sildebar() {
   };
 
   return (
-    <ul className={classes.sidenav}>
+    <ul>
       <li>
-        <a className={classes.active} href="#home">
-          FuShing
+        <a href="#1" className={classes.active}>FuShing</a>
+      </li>
+      <li>
+        <a href="#2" onClick={showNewYearProduct}>新年裝飾</a>
+      </li>
+      <li className={classes.dropdown}>
+        <a href="#3" onClick={showNewYearProduct} className={classes.dropbtn}>
+          萬聖裝飾
         </a>
+        <div className={classes.dropdownContent}>
+          <a href="#2" onClick={showChristmasProduct}>聖誕裝飾</a>
+          <a href="#3">中秋裝飾</a>
+          <a href="#4">兒童服飾</a>
+          <a href="#5">成年服飾</a>
+          <a href="#6">玩具</a>
+        </div>
       </li>
-      <li>
-        <a onClick={showNewYearProduct}>新年裝飾</a>
-      </li>
-      <li>
-        <a onClick={showChristmasProduct}>聖誕裝飾</a>
-      </li>
-      <li>
-        <a onClick={showNewYearProduct}>萬聖裝飾</a>
-      </li>
-      <li>
-        <a onClick={showChristmasProduct}>中秋裝飾</a>
-      </li>
-      <li>
-        <a onClick={showNewYearProduct}>兒童服飾</a>
-      </li>
-      <li>
-        <a onClick={showChristmasProduct}>成年服飾</a>
-      </li>
-      <li>
-        <a onClick={showNewYearProduct}>玩具</a>
-      </li>
-      <div>
-        <input
-          onChange={(e) => setInput(e.target.value)}
-          style={{ width: "100px" }}
-        />
-        <Button style={{ marginLeft: "20px" }} onClick={searchProduct}>
-          搜尋產品
-        </Button>
+
+      <div className={classes.searchBar}>
+        <div style={{ display: "flex", height: "30px" }}>
+          <input
+            onChange={(e) => setInput(e.target.value)}
+            style={{ width: "100px" }}
+          />
+          <Button onClick={searchProduct}>搜尋產品</Button>
+        </div>
       </div>
     </ul>
   );

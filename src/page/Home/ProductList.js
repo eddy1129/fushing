@@ -9,12 +9,12 @@ export default function ProductList() {
   let { tableItems } = useContext(TableContext);
   
   return (
-    <div>
+    <div className={classes.home_body}>
       <div className={classes.sildebar}>
         <Sildebar />
       </div>
-      <div className={classes.tableItems}>
-        <div className={classes.productTable}>{tableItems}</div>
+      <div className={classes.productTable}>
+        <div className={classes.tableItems}>{tableItems}</div>
       </div>
     </div>
   );
