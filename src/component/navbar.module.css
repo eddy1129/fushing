@@ -9,19 +9,19 @@
     height: 100%;
     overflow: auto;
   }
-  
+
   li a {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
   }
-  
+
   li a.active {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
   }
-  
+
   li a:hover:not(.active) {
     background-color: #555;
     color: white;
@@ -30,10 +30,10 @@
 
 @media screen and (max-width: 900px) {
   li a.active {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
   }
-  
+
   li a:hover:not(.active) {
     background-color: #555;
     color: white;
@@ -46,36 +46,38 @@
     background-color: #38444d;
     color: white;
   }
-  
+
   li {
     float: left;
   }
-  
-  li a, .dropbtn {
+
+  li a,
+  .dropbtn {
     display: inline-block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 16px;
     text-decoration: none;
     color: white;
   }
-  
-  li a:hover, .dropdown:hover .dropbtn {
+
+  li a:hover,
+  .dropdown:hover .dropbtn {
     background-color: red;
   }
-  
+
   li.dropdown {
     display: inline-block;
   }
-  
+
   .dropdownContent {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-  
+
   .dropdownContent a {
     color: black;
     padding: 12px 16px;
@@ -83,10 +85,25 @@
     display: block;
     text-align: left;
   }
-  
-  .dropdownContent a:hover {background-color: #f1f1f1;}
-  
+
+  .dropdownContent a:hover {
+    background-color: #f1f1f1;
+  }
+
   .dropdown:hover .dropdownContent {
     display: block;
   }
+
+  .searchBar {
+    float: right;
+    height: 20px;
+  }
+  .searchBar input{
+    height: 23px;
+  }
+
+  .searchBar input::placeholder {
+    font-size: 15px; /* Adjust the font size as per your requirements */
+  }
+  
 }
