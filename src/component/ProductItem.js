@@ -10,7 +10,7 @@ export default function ProductItem(props) {
         <img
           src={props.image}
           alt={props.product_name}
-          style={{ width: props.width == null ? 500 : props.width }}
+          style={{ width: props.width == null ? 300 : props.width }}
         />
       </Link>
       <p>{props.product_type}</p>

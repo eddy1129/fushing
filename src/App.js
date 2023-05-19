@@ -27,7 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <TableContext.Provider value={{tableItems,setTableItems}}>
-        <Title topic="FuShing" />
+        {/* <Title topic="FuShing" /> */}
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product" element={<ProductDetail />}>
