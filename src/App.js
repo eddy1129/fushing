@@ -2,12 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./page/ProductDetail/ProductDetail";
 import ProductList from "./page/Home/ProductList";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Title from "./component/Title.js";
 import { TableContext } from "./store/Table-context";
-import { useState } from 'react';
+import { useState } from "react";
 import ProductItem from "./component/ProductItem";
-import productsData from "./Product/ProductData"
-
+import productsData from "./Product/ProductData";
 
 function App() {
   const init_productsList = productsData.map((item) => (
@@ -22,12 +20,11 @@ function App() {
     />
   ));
 
-  const [tableItems, setTableItems] = useState(init_productsList)
-  
+  const [tableItems, setTableItems] = useState(init_productsList);
+
   return (
     <BrowserRouter>
-      <TableContext.Provider value={{tableItems,setTableItems}}>
-        {/* <Title topic="FuShing" /> */}
+      <TableContext.Provider value={{ tableItems, setTableItems }}>
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product" element={<ProductDetail />}>

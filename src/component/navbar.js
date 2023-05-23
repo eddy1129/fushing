@@ -83,9 +83,12 @@ function Sildebar() {
       </li>
       <li className={classes.dropdown}>
         <a href="#3" onClick={showNewYearProduct} className={classes.dropbtn}>
-          萬聖裝飾
+          產品列表
         </a>
         <div className={classes.dropdownContent}>
+          <a href="#2" onClick={showChristmasProduct}>
+            萬聖裝飾
+          </a>
           <a href="#2" onClick={showChristmasProduct}>
             聖誕裝飾
           </a>
@@ -96,18 +99,18 @@ function Sildebar() {
         </div>
       </li>
       <li className={classes.searchBar}>
-      <a href="#6">
-        <input
-          placeholder="搜尋商品"
-          onChange={(e) => setInput(e.target.value)}
-          style={{ width: "100px" }}
-        />
-        <SearchOutlined
-          className={classes.searchBtn}
-          style={{ fontSize: "20px", marginLeft: "5px" }}
-          onClick={searchProduct}
-        />
-      </a>
+        <a href="#6">
+          <input
+            placeholder="搜尋商品"
+            onChange={(e) => setInput(e.target.value)}
+            style={{ width: "100px" }}
+          />
+          <SearchOutlined
+            className={classes.searchBtn}
+            style={{ fontSize: "20px", marginLeft: "5px" }}
+            onClick={searchProduct}
+          />
+        </a>
       </li>
     </ul>
   );

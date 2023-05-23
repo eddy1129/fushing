@@ -1,4 +1,7 @@
 @media screen and (min-width: 900px) {
+  * {
+    font-family: "Heiti";
+  }
   div ul {
     list-style-type: none;
     margin-left: 0;
@@ -26,9 +29,20 @@
     background-color: #555;
     color: white;
   }
+
+  .product_list {
+    display: block;
+  }
+
+  .dropbtn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {
+  .product_list {
+    display: contents;
+  }
   li a.active {
     background-color: #04aa6d;
     color: white;
@@ -98,12 +112,11 @@
     float: right;
     height: 20px;
   }
-  .searchBar input{
+  .searchBar input {
     height: 23px;
   }
 
   .searchBar input::placeholder {
     font-size: 15px; /* Adjust the font size as per your requirements */
   }
-  
 }
