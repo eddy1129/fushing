@@ -1,7 +1,9 @@
+* {
+  font-family: "Source Han Sans";
+  letter-spacing: 1.5px;
+}
+
 @media screen and (min-width: 900px) {
-  * {
-    font-family: "Heiti";
-  }
   div ul {
     list-style-type: none;
     margin-left: 0;
@@ -72,11 +74,6 @@
     padding: 18px 16px;
     text-decoration: none;
     color: white;
-  }
-
-  li a:hover,
-  .dropdown:hover .dropbtn {
-    background-color: red;
   }
 
   li.dropdown {
