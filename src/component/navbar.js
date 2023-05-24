@@ -101,6 +101,7 @@ function Sildebar() {
             placeholder="搜尋商品"
             onChange={(e) => setInput(e.target.value)}
             style={{ width: "100px" }}
+            onKeyPress={searchProduct}
           />
           <SearchOutlined
             className={classes.searchBtn}

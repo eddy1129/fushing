@@ -1,7 +1,8 @@
-import { useParams, Link } from "react-router-dom";
+import React, { useParams, Link } from "react-router-dom";
 import Title from "../../component/Title";
 import productsData from "../../Product/ProductData";
 import ProductItem from "../../component/ProductItem";
+import classes from "./ProductDetail.module.css"
 
 
 export default function ProductDetail() {
@@ -19,7 +20,7 @@ export default function ProductDetail() {
           size={item.size}
           price={item.price}
           image={item.image}
-          width={1000}
+          width={300}
         />
       );
     } else {
@@ -28,13 +29,11 @@ export default function ProductDetail() {
   });
   
 
- 
-
   return (
-    <div>
-      <Title mainTitle={params.id + "產品資料"} />
+    <div className={classes.detailContent}>
+      <Title mainTitle={productsList[params.id]?.props.product_name} />
       {productsList}
-      <Link to="/">回到產品列表</Link>
+      <Link to="/">返回主目錄</Link>
     </div>
   );
 }

@@ -1,9 +1,7 @@
-export default function Title({ topic }) {
+export default function Title({ mainTitle}) {
   return (
-      
       <h1 style={{textAlign: "center"}}>
-        {topic}
+        {mainTitle}
       </h1>
-     
   );
 }
