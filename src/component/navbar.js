@@ -76,11 +76,7 @@ function Sildebar() {
           FuShing
         </a>
       </li>
-      <li>
-        <a href="#2" onClick={showNewYearProduct}>
-          新年裝飾
-        </a>
-      </li>
+     
       <li className={classes.dropdown}>
         <a href="#3" onClick={showNewYearProduct} className={classes.dropbtn}>
           產品列表
@@ -93,6 +89,7 @@ function Sildebar() {
             聖誕裝飾
           </a>
           <a href="#3">中秋裝飾</a>
+          <a href="#3">新年裝飾</a>
           <a href="#4">兒童服飾</a>
           <a href="#5">成年服飾</a>
           <a href="#6">玩具</a>
