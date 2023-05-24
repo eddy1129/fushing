@@ -3,7 +3,6 @@ import { TableContext } from "../store/Table-context";
 import ProductItem from "./ProductItem";
 import productsData from "../Product/ProductData";
 import classes from "./navbar.module.css";
-import { SearchOutlined } from "@ant-design/icons";
 
 function Sildebar() {
   let { setTableItems } = useContext(TableContext);
@@ -103,11 +102,7 @@ function Sildebar() {
             style={{ width: "100px" }}
             onKeyPress={searchProduct}
           />
-          <SearchOutlined
-            className={classes.searchBtn}
-            style={{ fontSize: "20px", marginLeft: "5px" }}
-            onClick={searchProduct}
-          />
+      
         </a>
       </li>
     </ul>
