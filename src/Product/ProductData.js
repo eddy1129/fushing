@@ -4,9 +4,8 @@ const data = [
     product_type: "New-Year",
     product_name: "燈龍",
     size: "20 x 60",
-    price: 8888,
-    image:
-      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/New-Year/apple.jpg",
+    price: 888,
+    image: "/img/Adult-Clothing/Black Howling Ghost.png",
   },
   {
     id: 1,
@@ -14,8 +13,7 @@ const data = [
     product_name: "test2",
     size: "20 x 60",
     price: 8888,
-    image:
-      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/New-Year/blueberry.jpg",
+    image: "/img/Adult-Clothing/Caribbean Pirate.jpg",
   },
   {
     id: 2,
