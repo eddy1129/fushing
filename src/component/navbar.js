@@ -4,6 +4,10 @@ import ProductItem from "./ProductItem";
 import productsData from "../Product/ProductData";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import classes from "../component/navbar.module.css";
+import Figure from 'react-bootstrap/Figure';
+
+
 
 
 function Sildebar() {
@@ -110,7 +114,17 @@ function Sildebar() {
         </li>
       </ul> */}
       <>
-        <Navbar>
+      <Figure>
+      <Figure.Image
+        width={171}
+        height={180}
+        alt="171x180"
+        src="/favicon.ico"
+      />
+      <Figure.Caption>
+      </Figure.Caption>
+    </Figure>
+        <Navbar className={classes.hi}>
           <Container>
             <Navbar.Brand href="#home">Brand link</Navbar.Brand>
           </Container>

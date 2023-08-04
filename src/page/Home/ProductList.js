@@ -20,7 +20,7 @@ export default function ProductList() {
           <Sildebar />
         </MDBCol>
         <MDBCol md='10'>
-          <MDBRow className='row-cols-1 row-cols-md-4 g-1' >
+          <MDBRow className='row-cols-1 row-cols-md-3 g-4' >
             {tableItems}
           </MDBRow>
         </MDBCol>
