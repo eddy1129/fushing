@@ -5,7 +5,7 @@ const data = [
     product_name: "燈龍",
     size: "20 x 60",
     price: 888,
-    image: "/img/Adult-Clothing/Black Howling Ghost.png",
+    image: "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ const data = [
     product_name: "test2",
     size: "20 x 60",
     price: 8888,
-    image: "/img/Adult-Clothing/Caribbean Pirate.jpg",
+    image: "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
   },
   {
     id: 2,
@@ -41,6 +41,71 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 5,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 6,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 7,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
   },
+  {
+    id: 8,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 9,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 10,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 11,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }, {
+    id: 12,
+    product_type: "Christmas",
+    product_name: "test5",
+    size: "20 x 60",
+    price: 8888,
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+  }
 ];
 export default data;

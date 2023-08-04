@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./page/ProductDetail/ProductDetail";
 import ProductList from "./page/Home/ProductList";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { TableContext } from "./store/Table-context";
 import { useState } from "react";
 import ProductItem from "./component/ProductItem";
 import productsData from "./Product/ProductData";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const init_productsList = productsData.map((item) => (
