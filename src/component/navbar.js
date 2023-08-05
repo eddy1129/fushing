@@ -1,14 +1,15 @@
 import { useState, useEffect, useContext } from "react";
 import { TableContext } from "../store/Table-context";
+import classes from "./navbar.module.css";
 import ProductItem from "./ProductItem";
 import productsData from "../Product/ProductData";
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import classes from "../component/navbar.module.css";
-import Figure from 'react-bootstrap/Figure';
 
-
-
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Sildebar() {
   let { setTableItems } = useContext(TableContext);
@@ -75,97 +76,53 @@ function Sildebar() {
   };
 
   return (
-    <div>
-      {/* <ul>
-        <li>
-          <a href="#1" className={classes.active}>
-            FuShing
-          </a>
-        </li>
-
-        <li className={classes.dropdown}>
-          <a href="#3" onClick={showNewYearProduct} className={classes.dropbtn}>
-            產品列表
-          </a>
-          <div className={classes.dropdownContent}>
-            <a href="#2" onClick={showChristmasProduct}>
-              萬聖裝飾
-            </a>
-            <a href="#2" onClick={showChristmasProduct}>
-              聖誕裝飾
-            </a>
-            <a href="#3">中秋裝飾</a>
-            <a href="#3">新年裝飾</a>
-            <a href="#4">兒童服飾</a>
-            <a href="#5">成年服飾</a>
-            <a href="#6">玩具</a>
-          </div>
-        </li>
-        <li className={classes.searchBar}>
-          <a href="#6">
-            <input
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container fluid>
+        <Navbar.Brand href="#">
+          <img
+            src="./favicon.ico"
+            style={{ width: "100px", borderRadius: "20" }}
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="navbarScroll"
+          style={{ background: "url(/listbtn.png)", paddingTop: "12px" }}
+        />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-2"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1" onClick={showChristmasProduct}>
+              中秋裝飾
+            </Nav.Link>
+            <Nav.Link href="#action2" onClick={showChristmasProduct}>
+              螢光棒
+            </Nav.Link>
+            <Nav.Link href="#action2" onClick={showChristmasProduct}>
+              燈籠
+            </Nav.Link>
+            <Nav.Link href="#action2" onClick={showChristmasProduct}>
+              靜電貼
+            </Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
               placeholder="搜尋商品"
+              className="me-3"
+              aria-label="Search"
               onChange={(e) => setInput(e.target.value)}
-              style={{ width: "100px" }}
-              onKeyPress={searchProduct}
+              style={{ width: "150px" }}
             />
-
-          </a>
-        </li>
-      </ul> */}
-      <>
-      <Figure>
-      <Figure.Image
-        width={171}
-        height={180}
-        alt="171x180"
-        src="/favicon.ico"
-      />
-      <Figure.Caption>
-      </Figure.Caption>
-    </Figure>
-        <Navbar className={classes.hi}>
-          <Container>
-            <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-          </Container>
-        </Navbar>
-        <br />
-        <Navbar className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand>Brand text</Navbar.Brand>
-          </Container>
-        </Navbar>
-        <br />
-        <Navbar className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand href="#home">
-              <img
-                src="/favicon.ico"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-                alt="React Bootstrap logo"
-              />
-            </Navbar.Brand>
-          </Container>
-        </Navbar>
-        <br />
-        <Navbar className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand href="#home">
-              <img
-                alt=""
-                src="/favicon.ico"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-              />{' '}
-              React Bootstrap
-            </Navbar.Brand>
-          </Container>
-        </Navbar>
-      </>
-    </div>
+            <Button variant="outline-success" onClick={searchProduct}>
+              Search
+            </Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

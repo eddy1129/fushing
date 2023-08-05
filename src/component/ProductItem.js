@@ -1,39 +1,26 @@
 import React from "react";
-import classes from "./ProductItem.module.css";
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
 
 import { Link } from "react-router-dom";
 
 export default function ProductItem(props) {
   return (
-
-
-    <Link to={"/product/" + props.id}>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src={props.image}
-            alt={props.product_name}
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>{props.product_type}</MDBCardTitle>
-            <MDBCardText>
-              {props.product_name}
-              {props.size}
-              {props.price}
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-    </Link>
+    <Col>
+      <Card>
+        <Link to={"/product/" + props.id}>
+          <Card.Img variant="top" src={props.image} />
+        </Link>
+        <Card.Body>
+          <Card.Title>{props.product_name}</Card.Title>
+          <Card.Text>
+            {props.product_type}
+            {props.size}
+            {props.price}
+            lead-in to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 }

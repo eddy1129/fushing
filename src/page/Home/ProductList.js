@@ -2,32 +2,23 @@ import Sildebar from "../../component/navbar";
 import classes from "./ProductsList.module.css";
 import { useContext } from "react";
 import { TableContext } from "../../store/Table-context";
-import {
-
-  MDBContainer,
-  MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
-
+import Container from "react-bootstrap/Container";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 export default function ProductList() {
   let { tableItems } = useContext(TableContext);
 
   return (
-    <MDBContainer style={{backgroundColor:"#e9ecef",padding:"20px",position:"relative",top:"0"}}>
-      <MDBRow>
-        <MDBCol md='2'>
-          <Sildebar />
-        </MDBCol>
-        <MDBCol md='10'>
-          <MDBRow className='row-cols-1 row-cols-md-3 g-4' >
-            {tableItems}
-          </MDBRow>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-
-
-
+    <>
+      <Container>
+        <Sildebar />
+        {true == true ? <div></div> : <div></div>}
+        <Row xs={1} md={2} className="g-4">
+          {tableItems}
+        </Row>
+      </Container>
+    </>
   );
 }
