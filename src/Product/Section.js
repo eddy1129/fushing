@@ -14,7 +14,7 @@ const data = [
     product_name: "product_name2",
     size: "size",
     price: 8888,
-    image: "/img/Halloween/apple.jpg",
+    image: "/img/Autumn/image1.jpeg",
   },
   {
     id: 2,
