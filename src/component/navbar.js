@@ -12,11 +12,6 @@ function Sildebar() {
   let { setTableItems } = useContext(TableContext);
   let [input, setInput] = useState("");
 
-  useEffect(() => {
-    if (input.length > 4) console.log("Long");
-    else console.log("Short");
-  }, [input]);
-
   const showNewYearProduct = () => {
     const newYearProduct = productsData.map((item) =>
       item.product_type === "New-Year" ? (
@@ -77,7 +72,7 @@ function Sildebar() {
       <Container fluid>
         <Navbar.Brand href="#">
           <img
-            src="./favicon.ico"
+            src="/favicon.ico"
             style={{ width: "100px", borderRadius: "20" }}
           />
         </Navbar.Brand>

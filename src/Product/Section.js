@@ -10,7 +10,7 @@ const data = [
   },
   {
     id: 1,
-    product_type: "New-Year",
+    product_type: "Christmas",
     product_name: "product_name2",
     size: "size",
     price: 8888,
@@ -18,7 +18,7 @@ const data = [
   },
   {
     id: 2,
-    product_type: "New-Year",
+    product_type: "Christmas2",
     product_name: "product_name3",
     size: "20 x 60",
     price: 8888,
@@ -27,7 +27,7 @@ const data = [
   },
   {
     id: 3,
-    product_type: "product_type4",
+    product_type: "Christma3",
     product_name: "product_type5",
     size: "20 x 60",
     price: 8888,

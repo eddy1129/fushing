@@ -11,6 +11,7 @@ export default function ProductSection(props) {
         <Link to={"/display/" + props.product_type}>
           <Card.Img variant="top" src={props.image} />
         </Link>
+
         <Card.Body>
           <Card.Title>{props.product_name}</Card.Title>
           <Card.Text>
