@@ -2,23 +2,25 @@ const data = [
   {
     id: 0,
     product_type: "New-Year",
-    product_name: "燈龍",
+    product_name: "New-Year1",
     size: "20 x 60",
     price: 888,
-    image: "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
   },
   {
     id: 1,
     product_type: "New-Year",
-    product_name: "test2",
+    product_name: "New-Year2",
     size: "20 x 60",
     price: 8888,
-    image: "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
+    image:
+      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
   },
   {
     id: 2,
     product_type: "New-Year",
-    product_name: "test3",
+    product_name: "New-Year3",
     size: "20 x 60",
     price: 8888,
     image:
@@ -27,7 +29,7 @@ const data = [
   {
     id: 3,
     product_type: "Christmas",
-    product_name: "test4",
+    product_name: "Christmas1",
     size: "20 x 60",
     price: 8888,
     image:
@@ -36,20 +38,22 @@ const data = [
   {
     id: 4,
     product_type: "Christmas",
-    product_name: "test5",
+    product_name: "Christmas2",
     size: "20 x 60",
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 5,
     product_type: "Christmas",
-    product_name: "test5",
+    product_name: "Christmas3",
     size: "20 x 60",
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 6,
     product_type: "Christmas",
     product_name: "test5",
@@ -57,7 +61,8 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 7,
     product_type: "Christmas",
     product_name: "test5",
@@ -74,7 +79,8 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 9,
     product_type: "Christmas",
     product_name: "test5",
@@ -82,7 +88,8 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 10,
     product_type: "Christmas",
     product_name: "test5",
@@ -90,7 +97,8 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 11,
     product_type: "Christmas",
     product_name: "test5",
@@ -98,7 +106,8 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }, {
+  },
+  {
     id: 12,
     product_type: "Christmas",
     product_name: "test5",
@@ -106,6 +115,6 @@ const data = [
     price: 8888,
     image:
       "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/orange.jpg",
-  }
+  },
 ];
 export default data;

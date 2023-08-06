@@ -4,11 +4,11 @@ import Col from "react-bootstrap/Col";
 
 import { Link } from "react-router-dom";
 
-export default function ProductItem(props) {
+export default function ProductSection(props) {
   return (
     <Col>
-      <Card>
-        <Link to={"/product/" + props.id}>
+      <Card style={{ marginTop: "10%" }}>
+        <Link to={"/display/" + props.product_type}>
           <Card.Img variant="top" src={props.image} />
         </Link>
         <Card.Body>

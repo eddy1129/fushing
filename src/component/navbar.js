@@ -1,15 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { TableContext } from "../store/Table-context";
-import classes from "./navbar.module.css";
 import ProductItem from "./ProductItem";
 import productsData from "../Product/ProductData";
-
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Sildebar() {
   let { setTableItems } = useContext(TableContext);
@@ -84,10 +81,7 @@ function Sildebar() {
             style={{ width: "100px", borderRadius: "20" }}
           />
         </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="navbarScroll"
-          style={{ background: "url(/listbtn.png)", paddingTop: "12px" }}
-        />
+        <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-2"
