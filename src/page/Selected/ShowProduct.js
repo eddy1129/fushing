@@ -5,8 +5,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom";
 import productsData from "../../Product/ProductData";
+import aData from "../../Product/Adata";
+import Lanterns from "../../Product/Lanterns";
+import GlowStick from "../../Product/GlowStick";
 import ProductItem from "../../component/ProductItem";
-import aData from "../../Product/data";
 
 export default function ShowProduct() {
   let params = useParams();
@@ -14,11 +16,14 @@ export default function ShowProduct() {
   let { tableItems, setTableItems } = useContext(TableContext);
 
   switch (params.product_type) {
-    case "New-Year":
-      dataX = productsData;
+    case "GlowStick":
+      dataX = GlowStick;
       break;
     case "Autumn":
       dataX = aData;
+      break;
+    case "Lanterns":
+      dataX = Lanterns;
       break;
     default:
       dataX = productsData;
