@@ -23,14 +23,5 @@ const data = [
     price: 8888,
     image: "/img/Lanterns/image9.png",
   },
-  {
-    id: 3,
-    product_type: "Christma3",
-    product_name: "product_type5",
-    size: "20 x 60",
-    price: 8888,
-    image:
-      "https://raw.githubusercontent.com/eddy1129/fushing/master/public/img/Christmas/mango.jpg",
-  },
 ];
 export default data;
