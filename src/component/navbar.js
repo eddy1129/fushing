@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { TableContext } from "../store/Table-context";
 import ProductItem from "./ProductItem";
 import productsData from "../Product/ProductData";
@@ -11,24 +11,6 @@ import Navbar from "react-bootstrap/Navbar";
 function Sildebar() {
   let { setTableItems } = useContext(TableContext);
   let [input, setInput] = useState("");
-
-  const showNewYearProduct = () => {
-    const newYearProduct = productsData.map((item) =>
-      item.product_type === "New-Year" ? (
-        <ProductItem
-          key={item.id}
-          id={item.id}
-          product_type={item.product_type}
-          product_name={item.product_name}
-          size={item.size}
-          price={item.price}
-          image={item.image}
-        />
-      ) : null
-    );
-
-    setTableItems(newYearProduct);
-  };
 
   const showChristmasProduct = () => {
     const christmasProduct = productsData.map((item) =>
@@ -71,11 +53,14 @@ function Sildebar() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand href="#">
-          <img
-            src="/favicon.ico"
-            style={{ width: "100px", borderRadius: "20" }}
-          />
+          <Nav.Link href="/">
+            <img
+              src="/favicon.ico"
+              style={{ width: "100px", borderRadius: "20" }}
+            />
+          </Nav.Link>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

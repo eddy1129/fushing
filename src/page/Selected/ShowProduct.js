@@ -1,40 +1,45 @@
 import Sildebar from "../../component/navbar";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { TableContext } from "../../store/Table-context";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom";
 import productsData from "../../Product/ProductData";
 import ProductItem from "../../component/ProductItem";
+import aData from "../../Product/data";
 
 export default function ShowProduct() {
   let params = useParams();
+  let dataX;
   let { tableItems, setTableItems } = useContext(TableContext);
 
+  switch (params.product_type) {
+    case "New-Year":
+      dataX = productsData;
+      break;
+    case "Autumn":
+      dataX = aData;
+      break;
+    default:
+      dataX = productsData;
+  }
+
   useEffect(() => {
-    const productsList = productsData.map((item) => {
-      console.log(`item.id ${item.id} params = ${params.product_type}`);
-      if (item.product_type == params.product_type) {
-        return (
-          <ProductItem
-            key={item.id}
-            id={item.id}
-            product_type={item.product_type}
-            product_name={item.product_name}
-            size={item.size}
-            price={item.price}
-            image={item.image}
-            width={300}
-          />
-        );
-      } else {
-        return null; // or any other alternative component or JSX you want to render for other items
-      }
+    const productsList = dataX.map((item) => {
+      return (
+        <ProductItem
+          key={item.id}
+          id={item.id}
+          product_type={item.product_type}
+          product_name={item.product_name}
+          size={item.size}
+          price={item.price}
+          image={item.image}
+        />
+      );
     });
     setTableItems(productsList);
-  }, []);
+  }, [dataX, setTableItems]);
 
   return (
     <Container>

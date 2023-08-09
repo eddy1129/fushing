@@ -9,7 +9,9 @@ export default function ProductItem(props) {
     <Col>
       <Card>
         <Link to={"/product/" + props.id}>
-          <Card.Img variant="top" src={props.image} />
+          <div className="wrapper">
+            <Card.Img variant="top" src={props.image} />
+          </div>
         </Link>
         <Card.Body>
           <Card.Title>{props.product_name}</Card.Title>
