@@ -8,7 +8,7 @@
 
 .wrapper2 {
   margin: 0 auto;
-  height: 500px;
+  max-height: 350px;
   overflow-y:hidden;
 
 }
@@ -21,10 +21,4 @@
   margin: 0 auto;
 }
 
-/* .wrapper Card.Img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  transform: rotate(90deg) scale(0.6);
-}
- */
+

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function ProductItem(props) {
   return (
     <Col>
-      <Card>
+      <Card  style={{ marginTop: "10%" }}>
         <Link to={"/product/" + props.id}>
           <div className="wrapper">
             <Card.Img variant="top" src={props.image} />

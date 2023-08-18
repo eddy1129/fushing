@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import Caro from "./Caro"
 
 import { Link } from "react-router-dom";
 
@@ -9,12 +8,12 @@ export default function ProductSection(props) {
   return (
     <Col >
       
-      <Card style={{ marginTop: "10%" }} >
+      <Card style={{ marginTop: "15%"}} >
         <Link to={"/display/" + props.product_type}>
-          <Card.Img variant="top" src={props.image} className="wrapper2"/>
+          <Card.Img variant="top" src={props.image} className="wrapper2" />
         </Link>
 
-        <Card.Body >
+        <Card.Body>
           <Card.Title>{props.product_name}</Card.Title>
           <Card.Text>
             {props.product_type}
