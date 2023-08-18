@@ -13,6 +13,14 @@
 
 }
 
+.caro-width{
+  height: 20vh;
+}
+
+.list-col{
+  margin: 0 auto;
+}
+
 /* .wrapper Card.Img {
   height: 100%;
   width: 100%;

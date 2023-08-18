@@ -14,7 +14,7 @@ function Sildebar() {
 
   const showChristmasProduct = () => {
     const christmasProduct = productsData.map((item) =>
-      item.product_type === "Christmas" ? (
+      item.product_type === "GlowStick" ? (
         <ProductItem
           key={item.id}
           id={item.id}
@@ -61,7 +61,7 @@ function Sildebar() {
           </Nav.Link>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        {/* <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-2"
@@ -94,7 +94,7 @@ function Sildebar() {
               Search
             </Button>
           </Form>
-        </Navbar.Collapse>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
   );
