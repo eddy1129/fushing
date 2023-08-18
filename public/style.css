@@ -3,6 +3,13 @@
   height: 270px;
   overflow-y:auto;
   object-fit: cover;
+  background: rgb(238, 227, 227);
+}
+
+.wrapper2 {
+  margin: 0 auto;
+  height: 500px;
+  overflow-y:hidden;
 
 }
 
