@@ -34,7 +34,7 @@ export default function ShowProduct() {
   const pageCount = Math.ceil(dataX.length / limit);
   const start = 0 + (page - 1) * limit;
   const currentData = dataX.slice(start, start + limit);
- 
+
 
 
 
@@ -53,13 +53,15 @@ export default function ShowProduct() {
       );
     });
     setTableItems(productsList);
-  }, [dataX, setTableItems,setPage,page]);
+  }, [dataX, setTableItems, setPage, page]);
 
   return (
     <Container>
       <Sildebar />
       <Row xs={1} md={4} className="g-1">
         {tableItems}
+      </Row>
+      <Row>
         <PaginationBasic pageCount={pageCount} page={page} setPage={setPage} />
       </Row>
     </Container>
