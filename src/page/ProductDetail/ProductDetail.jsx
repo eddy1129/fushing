@@ -1,17 +1,40 @@
 import { useParams, Link } from "react-router-dom";
 import Title from "../../component/Title";
 import productsData from "../../Product/ProductData";
-import ProductItem from "../../component/ProductItem";
-import classes from "./ProductDetail.module.css";
+import DetailBox from "../../component/DetailBox";
+import aData from "../../Product/Adata";
+import Lanterns from "../../Product/Lanterns";
+import GlowStick from "../../Product/GlowStick";
+import Sildebar from "../../component/navbar";
+import Card from "react-bootstrap/Card";
+
 
 export default function ProductDetail() {
   let params = useParams();
+  const splitParams = params.id.split("_");
+  const productType = splitParams[0];      // "GlowStick"
+  const index = parseInt(splitParams[1]);  // 0
 
-  const productsList = productsData.map((item) => {
-    console.log(`item.id ${item.id} params = ${params.id}`);
-    if (item.id === parseInt(params.id)) {
+  let dataX;
+
+  switch (productType) {
+    case "GlowStick":
+      dataX = GlowStick;
+      break;
+    case "Autumn":
+      dataX = aData;
+      break;
+    case "Lanterns":
+      dataX = Lanterns;
+      break;
+    default:
+      dataX = productsData;
+  }
+
+  const productsList = dataX.map((item) => {
+    if (item.id === index && item.product_type === productType) {
       return (
-        <ProductItem
+        <DetailBox
           key={item.id}
           id={item.id}
           product_type={item.product_type}
@@ -19,7 +42,7 @@ export default function ProductDetail() {
           size={item.size}
           price={item.price}
           image={item.image}
-          width={300}
+
         />
       );
     } else {
@@ -28,10 +51,11 @@ export default function ProductDetail() {
   });
 
   return (
-    <div className={classes.detailContent}>
-      <Title mainTitle={productsList[params.id]?.props.product_name} />
-      {productsList}
-      <Link to="/">返回主目錄</Link>
-    </div>
+    <>
+      <Sildebar />
+      <div id="productDetail">
+        {productsList}
+      </div>
+    </>
   );
 }

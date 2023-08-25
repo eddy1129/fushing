@@ -59,7 +59,7 @@ export default function ShowProduct() {
     <div className="bgc">
     <Container >
       <Sildebar />
-      <Row xs={1} md={4} className="g-1">
+      <Row xs={1} md={4} className="g-4">
         {tableItems}
       </Row>
       <Row>
