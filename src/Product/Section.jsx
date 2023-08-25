@@ -5,7 +5,7 @@ const data = [
     product_name: "熒光棒",
     size: "size",
     price: 888,
-    image: "/img/GlowStick/image12.png",
+    image: "/img/glowstick.jpg",
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ const data = [
     product_name: "中秋裝飾",
     size: "size",
     price: 8888,
-    image: "/img/Autumn/image12.jpeg",
+    image: "/img/mid.jpg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const data = [
     product_name: "燈籠",
     size: "20 x 60",
     price: 8888,
-    image: "/img/Lanterns/image9.png",
+    image: "/img/mid2.jpg",
   },
 ];
 export default data;

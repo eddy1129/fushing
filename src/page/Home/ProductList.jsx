@@ -10,12 +10,14 @@ export default function ProductList() {
 
   return (
     <>
-      <Container>
+    <div className="bgc">
+      <Container >
         <Sildebar />
-        <Row xs={1} md={3} className="g-5">
+        <Row>
           {tableSection}
         </Row>
       </Container>
+      </div>
     </>
   );
 }

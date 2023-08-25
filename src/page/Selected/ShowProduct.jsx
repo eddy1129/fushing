@@ -56,7 +56,8 @@ export default function ShowProduct() {
   }, [dataX, setTableItems, setPage, page]);
 
   return (
-    <Container>
+    <div className="bgc">
+    <Container >
       <Sildebar />
       <Row xs={1} md={4} className="g-1">
         {tableItems}
@@ -65,5 +66,6 @@ export default function ShowProduct() {
         <PaginationBasic pageCount={pageCount} page={page} setPage={setPage} />
       </Row>
     </Container>
+    </div>
   );
 }
