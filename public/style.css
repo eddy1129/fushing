@@ -1,3 +1,6 @@
+* {
+  text-decoration: none;
+}
 .wrapper {
   margin: 0 auto;
   height: 270px;
@@ -10,7 +13,6 @@
   margin: 0 auto;
   max-height: 350px;
   overflow-y: hidden;
-
 }
 
 .caro-width {
@@ -21,6 +23,9 @@
   margin: 0 auto;
 }
 
+a.link_text {
+  text-decoration: none;
+}
 
 /* .bgc {
   position: relative; 
@@ -81,7 +86,7 @@
 
 @media screen and (max-width: 768px) {
   #mainPage {
-   width: 100%;
+    width: 100%;
   }
 
   #mainPage .main_item {
@@ -94,4 +99,3 @@
     padding: 0;
   }
 }
-

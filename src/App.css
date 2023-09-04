@@ -36,19 +36,22 @@ main {
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
+  text-decoration: none !important;
 }
 .link:hover {
   background: lightskyblue;
   color: #000;
   transition: all 0.5s;
+  text-decoration: none !important;
 }
 .active {
-  background: lightskyblue;
+  background: rgb(135, 233, 250);
   color: #000;
 }
 .icon,
 .link_text {
   font-size: 20px;
+  text-decoration: none !important;
 }
 
 #show_container {
