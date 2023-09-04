@@ -1,19 +1,15 @@
 import { useParams, Link } from "react-router-dom";
-import Title from "../../component/Title";
 import productsData from "../../Product/ProductData";
 import DetailBox from "../../component/DetailBox";
 import aData from "../../Product/Adata";
 import Lanterns from "../../Product/Lanterns";
 import GlowStick from "../../Product/GlowStick";
-import Sildebar from "../../component/navbar";
-import Card from "react-bootstrap/Card";
-
 
 export default function ProductDetail() {
   let params = useParams();
   const splitParams = params.id.split("_");
-  const productType = splitParams[0];      // "GlowStick"
-  const index = parseInt(splitParams[1]);  // 0
+  const productType = splitParams[0]; // "GlowStick"
+  const index = parseInt(splitParams[1]); // 0
 
   let dataX;
 
@@ -42,7 +38,6 @@ export default function ProductDetail() {
           size={item.size}
           price={item.price}
           image={item.image}
-
         />
       );
     } else {
@@ -52,10 +47,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Sildebar />
-      <div id="productDetail">
-        {productsList}
-      </div>
+      <div id="productDetail">{productsList}</div>
     </>
   );
 }

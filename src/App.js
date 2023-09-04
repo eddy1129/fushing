@@ -9,7 +9,8 @@ import productsSection from "./Product/Section";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductSection from "./component/ProductSection";
 import ShowProduct from "./page/Selected/ShowProduct";
-import Maybe from "./Maybe";
+import Sidebar from "./component/Sidebar";
+import "./App.css";
 
 function App() {
   const init_productsList = productsData.map((item) => (
@@ -46,7 +47,6 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<ProductList />} />
-          <Route path="/test" element={<Maybe />} />
           <Route path="/product" element={<ProductDetail />}>
             <Route path=":id" element={<ProductDetail />} />
           </Route>
