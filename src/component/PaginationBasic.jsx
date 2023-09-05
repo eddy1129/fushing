@@ -23,7 +23,8 @@ function PaginationBasic(props) {
   }
 
   return (
-    <div>
+    <div style={{marginTop:"30px"}}>
+      
       <Pagination size="lg">{items}</Pagination>
     </div>
   );

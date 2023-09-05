@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function ProductItem(props) {
   return (
     <Col >
-      <Card style={{ marginTop: "10%" }} >
+      <Card style={{ marginTop: "10%" }} className="ya1">
         <Link to={"/product/" + props.product_type +"_"+ props.id}>
           <div className="wrapper">
             <Card.Img variant="top" src={props.image} />
@@ -24,7 +24,7 @@ export default function ProductItem(props) {
           </Card.Text>
         </Card.Body>
       </Card>
- 
+
     </Col>
   );
 }
