@@ -19,7 +19,7 @@ export default function ProductList() {
   ];
 
   return (
-    <>
+    <div id="show_container">
       <div className="left_show">
         <div>
           <div className="sidebar">
@@ -47,6 +47,6 @@ export default function ProductList() {
       <div className="right_show">
         <Row>{tableSection}</Row>
       </div>
-    </>
+      </div>
   );
 }

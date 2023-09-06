@@ -81,7 +81,7 @@ export default function ShowProduct() {
                 className="link"
                 activeclassName="active"
               >
-                <div className="link_text">{item.name}</div>
+                <div style={{ display: "block" }} className="link_text">{item.name}</div>
               </NavLink>
             ))}
           </div>
