@@ -9,7 +9,6 @@
   background: #000;
   color: #fff;
   height: 150vh;
-  width: 150px;
   transition: all 0.5s;
 }
 
@@ -52,6 +51,7 @@
 .icon,
 .link_text {
   text-decoration: none !important;
+  width: 80px;
 }
 
 #show_container {
@@ -65,7 +65,7 @@
 .right_show {
   position: absolute;
   top: 0;
-  left: 160px;
+  left: 150px;
 }
 
 .ya1 {
