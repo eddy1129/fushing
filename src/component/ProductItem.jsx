@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductItem(props) {
   return (
-    <Col >
+    <Col>
       <Card style={{ marginTop: "10%" }} className="ya1">
         <Link to={"/product/" + props.product_type +"_"+ props.id}>
           <div className="wrapper">

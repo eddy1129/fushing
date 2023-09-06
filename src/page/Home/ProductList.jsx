@@ -45,7 +45,7 @@ export default function ProductList() {
         </div>
       </div>
       <div className="right_show">
-        <Row>{tableSection}</Row>
+        <Row xs={1} >{tableSection}</Row>
       </div>
       </div>
   );
