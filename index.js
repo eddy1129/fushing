@@ -1,40 +1,104 @@
-const XLSX = require("xlsx");
-const fs = require("fs");
+import { useContext, useEffect, useState } from "react";
+import { TableContext } from "../../store/Table-context";
+import Row from "react-bootstrap/Row";
+import { useParams } from "react-router-dom";
+import productsData from "../../Product/ProductData";
+import Autumn from "../../Product/Autumn";
+import Lanterns from "../../Product/Lanterns";
+import GlowStick from "../../Product/GlowStick";
+import ProductItem from "../../component/ProductItem";
+import PaginationBasic from "../../component/PaginationBasic";
+import "../../App.css";
+import { NavLink } from "react-router-dom";
 
-const workbook = XLSX.readFile("test.xlsx");
-const sheet_name_list = workbook.SheetNames;
+export default function ShowProduct() {
+  const menuItem = [
+    {
+      path: "/",
+      name: "Dashboard",
+    },
+    {
+      path: "/display/GlowStick",
+      name: "display/GlowStick",
+    },
+  ];
 
-// Assuming data is in the first worksheet
-const worksheet = workbook.Sheets[sheet_name_list[0]];
-
-// Prepare the data string
-let dataString = "";
-
-// Assuming that the data in columns C and D starts from the second row and ends at row 80
-for (let row = 2; row <= 80; row++) {
-  let c_address = "C" + row;
-  let d_address = "D" + row;
-
-  // Check if cell exists before reading its value
-  if (
-    worksheet[c_address] !== undefined &&
-    worksheet[d_address] !== undefined
-  ) {
-    let c_value = worksheet[c_address].v;
-    let d_value = worksheet[d_address].v;
-
-    // Subtract 2 from row to start index from 0
-    let index = row - 2;
-
-    dataString += `{id:${index}, name: "${c_value}", desc: "${d_value}"},\n`;
+  let params = useParams();
+  let product_menu;
+  let { tableItems, setTableItems } = useContext(TableContext);
+  switch (params.product_type) {
+    case "GlowStick":
+      product_menu = GlowStick;
+      break;
+    case "Autumn":
+      product_menu = Autumn;
+      break;
+    case "Lanterns":
+      product_menu = Lanterns;
+      break;
+    default:
+      product_menu = productsData;
   }
+
+  const [page, setPage] = useState(1);
+  const limit = 8;
+  const pageCount = Math.ceil(product_menu.length / limit);
+  const start = 0 + (page - 1) * limit;
+  const currentData = product_menu.slice(start, start + limit);
+
+  useEffect(() => {
+    const productsList = currentData.map((item) => {
+      return (
+        <ProductItem
+          key={item.id}
+          id={item.id}
+          product_type={item.product_type}
+          product_name={item.product_name}
+          size={item.size}
+          price={item.price}
+          image={item.image}
+        />
+      );
+    });
+    setTableItems(productsList);
+  }, [product_menu, setTableItems, setPage, page]);
+
+  return (
+    <div id="show_container">
+      <div className="left_show">
+        <div>
+          <div className="sidebar">
+            <div className="top_section">
+              <h1 style={{ display: "block" }} className="logo">
+                Logo
+              </h1>
+              <div style={{ marginLeft: "50px" }} className="bars"></div>
+            </div>
+            {menuItem.map((item, index) => (
+              <NavLink
+                to={item.path}
+                key={index}
+                className="link"
+                activeclassName="active"
+              >
+                <div style={{ display: "block" }} className="link_text">{item.name}</div>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="right_show">
+        <Row xs={1} md={3} className="g-4">
+          {tableItems}
+        </Row>
+        <Row>
+          <PaginationBasic
+            pageCount={pageCount}
+            page={page}
+            setPage={setPage}
+          />
+        </Row>
+      </div>
+    </div>
+  );
 }
-
-// Write the data to a .txt file
-fs.writeFile("data.js", dataString, (err) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log("Successfully written to file.");
-  }
-});

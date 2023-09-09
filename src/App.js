@@ -3,14 +3,12 @@ import ProductDetail from "./page/ProductDetail/ProductDetail";
 import ProductList from "./page/Home/ProductList";
 import { TableContext } from "./store/Table-context";
 import { useState } from "react";
-import productsSection from "./Product/Section";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProductSection from "./component/ProductSection";
-import ShowProduct from "./page/Selected/ShowProduct";
 import "./App.css";
 import Autumn from "./Product/Autumn";
 import Lanterns from "./Product/Lanterns";
 import GlowStick from "./Product/GlowStick";
+import ProductItem from "./component/ProductItem";
 
 function App() {
 
@@ -26,8 +24,8 @@ function App() {
   ]
 
 
-  const sections = productsSection.map((item) => (
-    <ProductSection
+  const sections = all_product.map((item) => (
+    <ProductItem
       key={item.id}
       id={item.id}
       product_type={item.product_type}
@@ -37,22 +35,20 @@ function App() {
       image={item.image}
     />
   ));
+ 
 
-  const [tableItems, setTableItems] = useState([]);
-  const [tableSection] = useState(sections);
+  const [tableItems, setTableItems] = useState(sections);
 
+  
   return (
     <BrowserRouter>
       <TableContext.Provider
-        value={{ tableSection, tableItems, setTableItems }}
+        value={{  tableItems, setTableItems, all_product }}
       >
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product" element={<ProductDetail />}>
             <Route path=":id" element={<ProductDetail />} />
-          </Route>
-          <Route path="/display" element={<ShowProduct />}>
-            <Route path=":product_type" element={<ShowProduct />} />
           </Route>
           <Route path="*" element={<p>404 not found</p>} />
         </Routes>
