@@ -15,13 +15,36 @@ export default function ProductList() {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(9);
   const [pageCount, setPageCount] = useState(Math.ceil(all_product.length / limit));
-  const start = 0 + (page - 1) * limit;
+  const start =  (page - 1) * limit;
 
   const [items, setItems ] = useState(all_product) 
   const currentData = items.slice(start, start + limit);
-  const goA = () => {
+  const showGlowStick = () => {
     setItems(GlowStick)
+    setPage(1)
     setPageCount(Math.ceil(GlowStick.length / limit))
+    window.scrollTo(0, 0);
+  }
+
+  const showAutumn = () => {
+    setItems(Autumn)
+    setPage(1)
+    setPageCount(Math.ceil(Autumn.length / limit))
+    window.scrollTo(0, 0);
+  }
+
+  const showLanterns = () => {
+    setItems(Lanterns)
+    setPage(1)
+    setPageCount(Math.ceil(Lanterns.length / limit))
+    window.scrollTo(0, 0);
+  }
+
+  const showAll = () => {
+    setItems(all_product)
+    setPage(1)
+    setPageCount(Math.ceil(all_product.length / limit))
+    window.scrollTo(0, 0);
   }
 
   useEffect(() => {
@@ -39,7 +62,7 @@ export default function ProductList() {
       );
     });
     setTableItems(productsList);
-  }, [goA,setTableItems, setPage, page]);
+  }, [showAutumn, showGlowStick, showLanterns, setPage, page]);
 
   // to
 
@@ -55,22 +78,22 @@ export default function ProductList() {
               <h1>福成商行</h1>
               <div className="bars"></div>
             </div>
-            <NavLink className={isActive} activeclassName="">
+            <NavLink className={isActive} onClick={showAll}>
               <div style={{ display: "block" }} className="link_text">
                 全部商品
               </div>
             </NavLink>
-            <NavLink className="link" activeclassName="active">
+            <NavLink className="link" onClick={showLanterns} >
               <div style={{ display: "block" }} className="link_text">
                 熒光棒
               </div>·
             </NavLink>
-            <NavLink className="link" >
+            <NavLink className="link" onClick={showAutumn}>
               <div style={{ display: "block" }} className="link_text">
                 中秋裝飾
               </div>
             </NavLink>
-            <NavLink className="link" activeclassName="active" onClick={goA}>
+            <NavLink className="link" activeclassName="active" onClick={showGlowStick}>
               <div style={{ display: "block" }} className="link_text">
                 燈籠
               </div>
