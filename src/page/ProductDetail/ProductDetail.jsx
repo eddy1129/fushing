@@ -1,7 +1,7 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import productsData from "../../Product/ProductData";
 import DetailBox from "../../component/DetailBox";
-import aData from "../../Product/Adata";
+import aData from "../../Product/Autumn";
 import Lanterns from "../../Product/Lanterns";
 import GlowStick from "../../Product/GlowStick";
 

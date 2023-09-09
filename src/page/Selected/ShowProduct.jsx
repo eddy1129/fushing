@@ -3,7 +3,7 @@ import { TableContext } from "../../store/Table-context";
 import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom";
 import productsData from "../../Product/ProductData";
-import aData from "../../Product/Adata";
+import Autumn from "../../Product/Autumn";
 import Lanterns from "../../Product/Lanterns";
 import GlowStick from "../../Product/GlowStick";
 import ProductItem from "../../component/ProductItem";
@@ -24,27 +24,27 @@ export default function ShowProduct() {
   ];
 
   let params = useParams();
-  let dataX;
+  let product_menu;
   let { tableItems, setTableItems } = useContext(TableContext);
   switch (params.product_type) {
     case "GlowStick":
-      dataX = GlowStick;
+      product_menu = GlowStick;
       break;
     case "Autumn":
-      dataX = aData;
+      product_menu = Autumn;
       break;
     case "Lanterns":
-      dataX = Lanterns;
+      product_menu = Lanterns;
       break;
     default:
-      dataX = productsData;
+      product_menu = productsData;
   }
 
   const [page, setPage] = useState(1);
   const limit = 8;
-  const pageCount = Math.ceil(dataX.length / limit);
+  const pageCount = Math.ceil(product_menu.length / limit);
   const start = 0 + (page - 1) * limit;
-  const currentData = dataX.slice(start, start + limit);
+  const currentData = product_menu.slice(start, start + limit);
 
   useEffect(() => {
     const productsList = currentData.map((item) => {
@@ -61,7 +61,7 @@ export default function ShowProduct() {
       );
     });
     setTableItems(productsList);
-  }, [dataX, setTableItems, setPage, page]);
+  }, [product_menu, setTableItems, setPage, page]);
 
   return (
     <div id="show_container">
