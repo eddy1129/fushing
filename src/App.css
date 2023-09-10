@@ -8,6 +8,7 @@
   background: #000;
   color: #fff;
   height: 150vh;
+  width: 20vw;
   transition: all 0.5s;
 }
 
@@ -47,6 +48,11 @@
   color: #000;
 }
 
+.active2 {
+  background: rgb(250, 175, 135);
+  color: #000;
+}
+
 .icon,
 .link_text {
   text-decoration: none !important;
@@ -63,8 +69,9 @@
 
 .right_show {
   position: absolute;
+  width: 80vw;
   top: 0;
-  left: 150px;
+  left: 20vw;
 }
 
 .ya1 {
