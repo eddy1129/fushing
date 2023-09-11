@@ -11,6 +11,7 @@ import GlowStick from "../../Product/GlowStick";
 
 export default function ProductList() {
   let { tableItems, all_product, setTableItems } = useContext(TableContext);
+  const [activeLink, setActiveLink] = useState("allproduct");
 
   const [page, setPage] = useState(1);
   const limit = 9;
@@ -44,6 +45,7 @@ export default function ProductList() {
       setPage(1);
       setPageCount(Math.ceil(product_item.length / limit));
       window.scrollTo(0, 0);
+      setActiveLink(value); // Set the active link
     },
     [all_product]
   );
@@ -65,40 +67,43 @@ export default function ProductList() {
     setTableItems(productsList);
   }, [showTable, currentData, setTableItems, setPage, page]);
 
-  // to
-
-  const isActive = "link active2";
-
   return (
     <div id="show_container">
       <div className="left_show">
         <div>
           <div className="sidebar">
             <div className="top_section">
-              <h1>福成商行</h1>
-              <div className="bars"></div>
+              <img src="/favicon.ico" alt="logo" />
             </div>
-            <NavLink className={isActive} onClick={() => showTable("all")}>
+            <NavLink
+              className={`link ${activeLink === "allproduct" ? "active2" : ""}`}
+              onClick={() => showTable("allproduct")}
+            >
               <div style={{ display: "block" }} className="link_text">
                 全部商品
               </div>
             </NavLink>
             <NavLink
-              className="link"
+              className={`link ${
+                activeLink === "showGlowStick" ? "active2" : ""
+              }`}
               onClick={() => showTable("showGlowStick")}
             >
               <div style={{ display: "block" }} className="link_text">
                 熒光棒
               </div>
             </NavLink>
-            <NavLink className="link" onClick={() => showTable("Autumn")}>
+            <NavLink
+              className={`link ${activeLink === "Autumn" ? "active2" : ""}`}
+              onClick={() => showTable("Autumn")}
+            >
               <div style={{ display: "block" }} className="link_text">
                 中秋裝飾
               </div>
             </NavLink>
+
             <NavLink
-              className="link"
-              activeclassName="active"
+              className={`link ${activeLink === "Lanterns" ? "active2" : ""}`}
               onClick={() => showTable("Lanterns")}
             >
               <div style={{ display: "block" }} className="link_text">
@@ -109,7 +114,7 @@ export default function ProductList() {
         </div>
       </div>
       <div className="right_show">
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={3} className="g-2">
           {tableItems}
         </Row>
         <div className="">
