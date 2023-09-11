@@ -58,7 +58,7 @@
       rgba(38, 36, 24, 0.9)
     ),
     url("./image/bgc.jpg");
-  background-attachment: scroll;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   place-items: center;

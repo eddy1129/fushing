@@ -10,7 +10,7 @@ function PaginationBasic(props) {
         active={number === props.page}
         onClick={() => {
           props.setPage(number);
-          window.scrollTo(0, 0);
+          document.querySelector("#bgc").scrollTop = 0;
         }}
       >
         {number}
