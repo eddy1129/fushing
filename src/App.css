@@ -51,8 +51,18 @@
   width: 80px;
 }
 
-#show_container {
+#bgc {
   position: relative;
+  background-image: linear-gradient(
+      rgba(53, 53, 35, 0.7),
+      rgba(38, 36, 24, 0.9)
+    ),
+    url("./image/bgc.jpg");
+  background-attachment: scroll;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  overflow: auto;
 }
 
 .left_show {
@@ -64,6 +74,7 @@
   max-width: 80vw;
   top: 0;
   left: 20vw;
+  overflow: hidden;
 }
 
 .card_margin {

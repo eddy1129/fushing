@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProductDetail from "./page/ProductDetail/ProductDetail";
-import ProductList from "./page/Home/ProductList";
 import { TableContext } from "./store/Table-context";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import ProductDetail from "./page/ProductDetail/ProductDetail";
+import Home from "./page/Home/Home";
 import Autumn from "./Product/Autumn";
 import Lanterns from "./Product/Lanterns";
 import GlowStick from "./Product/GlowStick";
 import ProductItem from "./component/ProductItem";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   const all_product = [...Autumn, ...Lanterns, ...GlowStick];
@@ -31,7 +31,7 @@ function App() {
     <BrowserRouter>
       <TableContext.Provider value={{ tableItems, setTableItems, all_product }}>
         <Routes>
-          <Route path="/" element={<ProductList />} />
+          <Route path="/" element={<Home />} />
           <Route path="/product" element={<ProductDetail />}>
             <Route path=":id" element={<ProductDetail />} />
           </Route>

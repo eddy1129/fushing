@@ -9,12 +9,12 @@ import Autumn from "../../Product/Autumn";
 import Lanterns from "../../Product/Lanterns";
 import GlowStick from "../../Product/GlowStick";
 
-export default function ProductList() {
+export default function Home() {
   let { tableItems, all_product, setTableItems } = useContext(TableContext);
   const [activeLink, setActiveLink] = useState("allproduct");
 
   const [page, setPage] = useState(1);
-  const limit = 9;
+  const limit = 12;
   const [pageCount, setPageCount] = useState(
     Math.ceil(all_product.length / limit)
   );
@@ -68,7 +68,7 @@ export default function ProductList() {
   }, [showTable, currentData, setTableItems, setPage, page]);
 
   return (
-    <div id="show_container">
+    <div id="bgc">
       <div className="left_show">
         <div>
           <div className="sidebar">
