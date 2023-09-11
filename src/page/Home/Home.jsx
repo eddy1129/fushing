@@ -44,7 +44,7 @@ export default function Home() {
       setItems(product_item);
       setPage(1);
       setPageCount(Math.ceil(product_item.length / limit));
-      window.scrollTo(0, 0);
+      document.querySelector("#bgc").scrollTop = 0;
       setActiveLink(value); // Set the active link
     },
     [all_product]

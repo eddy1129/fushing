@@ -11,13 +11,13 @@
 }
 
 .top_section img {
-  max-width: 20vw;
+  max-width: 30vw;
 }
 
 .sidebar {
   background: #8b0000;
   color: #ffd700;
-  width: 20vw;
+  width: 30vw;
   transition: all 0.5s;
 }
 
@@ -71,15 +71,15 @@
 
 .right_show {
   position: absolute;
-  max-width: 80vw;
+  max-width: 70vw;
   top: 0;
-  left: 20vw;
+  left: 30vw;
   overflow: hidden;
 }
 
 .card_margin {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 250px;
+  width: 220px;
   margin: 0 auto;
 }
 

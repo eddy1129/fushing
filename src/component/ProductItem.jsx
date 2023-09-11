@@ -15,7 +15,7 @@ export default function ProductItem(props) {
         </Link>
         <Card.Body className="itemInner">
           <Card.Title>{props.product_name}</Card.Title>
-          <Card.Text className="itemContent">
+          <Card.Text>
             {props.size}
             <br />
             {props.price}
