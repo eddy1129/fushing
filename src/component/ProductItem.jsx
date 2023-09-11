@@ -7,16 +7,15 @@ import { Link } from "react-router-dom";
 export default function ProductItem(props) {
   return (
     <Col>
-      <Card style={{ marginTop: "10%" }} className="ya1">
-        <Link to={"/product/" + props.product_type +"_"+ props.id}>
+      <Card style={{ marginTop: "10%" }} className="card_margin">
+        <Link to={"/product/" + props.product_type + "_" + props.id}>
           <div className="wrapper">
             <Card.Img variant="top" src={props.image} />
           </div>
         </Link>
         <Card.Body className="itemInner">
-          <Card.Title >{props.product_name}</Card.Title>
+          <Card.Title>{props.product_name}</Card.Title>
           <Card.Text className="itemContent">
-
             {props.size}
             <br />
             {props.price}
@@ -24,7 +23,6 @@ export default function ProductItem(props) {
           </Card.Text>
         </Card.Body>
       </Card>
-
     </Col>
   );
 }

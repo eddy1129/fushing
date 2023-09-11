@@ -69,13 +69,15 @@
 
 .right_show {
   position: absolute;
-  width: 80vw;
+  max-width: 80vw;
   top: 0;
   left: 20vw;
 }
 
-.ya1 {
+.card_margin {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 250px;
+  margin: 0 auto;
 }
 
 /* CSS */
@@ -110,4 +112,12 @@
 
 .button-42:hover {
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+.Pagination_margin {
+  padding-top: 30px;
+  margin: 0 auto;
+  max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
 }

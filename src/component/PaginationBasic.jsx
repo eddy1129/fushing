@@ -1,6 +1,6 @@
 import React from "react";
 import { Pagination } from "react-bootstrap";
-
+import "../App.css";
 function PaginationBasic(props) {
   let items = [];
   for (let number = 1; number <= props.pageCount; number++) {
@@ -19,9 +19,9 @@ function PaginationBasic(props) {
   }
 
   return (
-    <div style={{ marginTop: "30px", width: "100vw" }}>
-      <Pagination size="lg">{items}</Pagination>
-    </div>
+    <Pagination size="sm" className="Pagination_margin">
+      {items}
+    </Pagination>
   );
 }
 
