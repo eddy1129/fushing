@@ -11,18 +11,7 @@ import GlowStick from "./Product/GlowStick";
 import ProductItem from "./component/ProductItem";
 
 function App() {
-
-  console.log("Autumn",Autumn)
-  console.log("Lanterns",Lanterns)
-  console.log("GlowStick",GlowStick)
-
-
-  const all_product = [
-    ...Autumn,
-    ...Lanterns,
-    ...GlowStick
-  ]
-
+  const all_product = [...Autumn, ...Lanterns, ...GlowStick];
 
   const sections = all_product.map((item) => (
     <ProductItem
@@ -35,16 +24,12 @@ function App() {
       image={item.image}
     />
   ));
- 
 
   const [tableItems, setTableItems] = useState(sections);
 
-  
   return (
     <BrowserRouter>
-      <TableContext.Provider
-        value={{  tableItems, setTableItems, all_product }}
-      >
+      <TableContext.Provider value={{ tableItems, setTableItems, all_product }}>
         <Routes>
           <Route path="/" element={<ProductList />} />
           <Route path="/product" element={<ProductDetail />}>

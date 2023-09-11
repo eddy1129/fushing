@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useCallback } from "react";
 import { TableContext } from "../../store/Table-context";
 import "../../App.css";
 import Row from "react-bootstrap/Row";
@@ -13,7 +13,7 @@ export default function ProductList() {
   let { tableItems, all_product, setTableItems } = useContext(TableContext);
 
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(9);
+  const limit = 9;
   const [pageCount, setPageCount] = useState(
     Math.ceil(all_product.length / limit)
   );
@@ -21,33 +21,32 @@ export default function ProductList() {
 
   const [items, setItems] = useState(all_product);
   const currentData = items.slice(start, start + limit);
-  const showGlowStick = () => {
-    setItems(GlowStick);
-    setPage(1);
-    setPageCount(Math.ceil(GlowStick.length / limit));
-    window.scrollTo(0, 0);
-  };
 
-  const showAutumn = () => {
-    setItems(Autumn);
-    setPage(1);
-    setPageCount(Math.ceil(Autumn.length / limit));
-    window.scrollTo(0, 0);
-  };
+  const showTable = useCallback(
+    (value) => {
+      let product_item;
+      switch (value) {
+        case "showGlowStick":
+          product_item = GlowStick;
+          break;
+        case "Lanterns":
+          product_item = Lanterns;
+          break;
+        case "Autumn":
+          product_item = Autumn;
+          break;
+        default:
+          product_item = all_product;
+          break;
+      }
 
-  const showLanterns = () => {
-    setItems(Lanterns);
-    setPage(1);
-    setPageCount(Math.ceil(Lanterns.length / limit));
-    window.scrollTo(0, 0);
-  };
-
-  const showAll = () => {
-    setItems(all_product);
-    setPage(1);
-    setPageCount(Math.ceil(all_product.length / limit));
-    window.scrollTo(0, 0);
-  };
+      setItems(product_item);
+      setPage(1);
+      setPageCount(Math.ceil(product_item.length / limit));
+      window.scrollTo(0, 0);
+    },
+    [all_product]
+  );
 
   useEffect(() => {
     const productsList = currentData.map((item) => {
@@ -64,7 +63,7 @@ export default function ProductList() {
       );
     });
     setTableItems(productsList);
-  }, [showAutumn, showGlowStick, showLanterns, setPage, page]);
+  }, [showTable, currentData, setTableItems, setPage, page]);
 
   // to
 
@@ -79,17 +78,20 @@ export default function ProductList() {
               <h1>福成商行</h1>
               <div className="bars"></div>
             </div>
-            <NavLink className={isActive} onClick={showAll}>
+            <NavLink className={isActive} onClick={() => showTable("all")}>
               <div style={{ display: "block" }} className="link_text">
                 全部商品
               </div>
             </NavLink>
-            <NavLink className="link" onClick={showLanterns}>
+            <NavLink
+              className="link"
+              onClick={() => showTable("showGlowStick")}
+            >
               <div style={{ display: "block" }} className="link_text">
                 熒光棒
               </div>
             </NavLink>
-            <NavLink className="link" onClick={showAutumn}>
+            <NavLink className="link" onClick={() => showTable("Autumn")}>
               <div style={{ display: "block" }} className="link_text">
                 中秋裝飾
               </div>
@@ -97,7 +99,7 @@ export default function ProductList() {
             <NavLink
               className="link"
               activeclassName="active"
-              onClick={showGlowStick}
+              onClick={() => showTable("Lanterns")}
             >
               <div style={{ display: "block" }} className="link_text">
                 燈籠
