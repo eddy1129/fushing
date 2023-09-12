@@ -18,25 +18,28 @@
   background-color: #ff6347;
   color: #ffff;
   text-align: center;
-  height: 70px;
+  height: 85px;
+  overflow-y: auto;
 }
 
-#productDetail {
-  height: 70vh;
+#deatil_main {
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(53, 53, 35, 0.7),
+      rgba(38, 36, 24, 0.9)
+    ),
+    url("./img/bgc.jpg");
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+  overflow: auto;
 }
 
-#productDetail .itemContent {
-  width: 100%;
-  text-align: center;
-}
-
-#productDetail .detailtest {
+#deatil_main .detail_card {
   margin: 0 auto;
-}
-
-#productDetail .detailtest .linkcolor {
-  color: aliceblue;
-  text-decoration: none;
 }

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState, useCallback } from "react";
 import { TableContext } from "../../store/Table-context";
 import "../../App.css";
-
 import Row from "react-bootstrap/Row";
 import { NavLink } from "react-router-dom";
 import PaginationBasic from "../../component/PaginationBasic";
@@ -52,8 +51,8 @@ export default function Home() {
   );
 
   useEffect(() => {
+    /* const productsList = currentData.map((item) => { */
     const productsList = items.map((item) => {
-      /* const productsList = currentData.map((item) => { */
       return (
         <ProductItem
           key={item.id}
@@ -116,15 +115,10 @@ export default function Home() {
         </div>
       </div>
       <div className="right_show">
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={3} className="g-2">
           {tableItems}
         </Row>
-
-        {/* <PaginationBasic
-            pageCount={pageCount}
-            page={page}
-            setPage={setPage}
-          /> */}
+        {/*  <PaginationBasic pageCount={pageCount} page={page} setPage={setPage} /> */}
       </div>
     </div>
   );
