@@ -73,9 +73,9 @@ export default function Home() {
       <div className="left_show">
         <div>
           <div className="sidebar">
-            <div className="top_section">
+            {/* <div className="top_section">
               <img src="/favicon.ico" alt="logo" />
-            </div>
+            </div> */}
             <NavLink
               className={`link ${activeLink === "allproduct" ? "active2" : ""}`}
               onClick={() => showTable("allproduct")}
