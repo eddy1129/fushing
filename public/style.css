@@ -1,13 +1,23 @@
+.item_main {
+  position: relative;
+}
+
 .wrapper {
+  position: relative;
   margin: 0 auto;
-  height: 230px;
+  width: 230px;
   overflow-y: auto;
   object-fit: cover;
-  background: rgb(238, 227, 227);
 }
 
 .itemInner {
-  background-color: rgba(241, 222, 209, 0.825);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: #ff6347;
+  color: #ffff;
+  text-align: center;
+  height: 70px;
 }
 
 #productDetail {

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState, useCallback } from "react";
 import { TableContext } from "../../store/Table-context";
 import "../../App.css";
+
 import Row from "react-bootstrap/Row";
 import { NavLink } from "react-router-dom";
 import PaginationBasic from "../../component/PaginationBasic";
@@ -114,9 +115,10 @@ export default function Home() {
         </div>
       </div>
       <div className="right_show">
-        <Row xs={1} md={3} className="g-2">
+        <Row xs={1} md={3} className="g-4">
           {tableItems}
         </Row>
+
         <div className="">
           <PaginationBasic
             pageCount={pageCount}
