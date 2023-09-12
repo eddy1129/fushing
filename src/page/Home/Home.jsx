@@ -52,7 +52,8 @@ export default function Home() {
   );
 
   useEffect(() => {
-    const productsList = currentData.map((item) => {
+    const productsList = items.map((item) => {
+      /* const productsList = currentData.map((item) => { */
       return (
         <ProductItem
           key={item.id}
@@ -119,13 +120,11 @@ export default function Home() {
           {tableItems}
         </Row>
 
-        <div className="">
-          <PaginationBasic
+        {/* <PaginationBasic
             pageCount={pageCount}
             page={page}
             setPage={setPage}
-          />
-        </div>
+          /> */}
       </div>
     </div>
   );
